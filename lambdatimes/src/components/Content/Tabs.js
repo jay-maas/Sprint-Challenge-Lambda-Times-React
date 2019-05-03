@@ -8,9 +8,10 @@ class Tabs extends React.Component {
       <div className="tabs">
         <div className="topics">
           <span className="title">TRENDING TOPICS:</span>
+          {/* Completed */}
           {/* map over the tabs provided on your props, create a new Tab component for each one.
               give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-          {tabs && tabs.map(tab => <Tab tab={tab} /> )}
+          {tabs && tabs.map((tab, index) => <Tab tab={tab} key={index} changeSelected={this.props.changeSelected} selectedTab={this.props.selectedTab} /> )}
         </div>
       </div>
     );
