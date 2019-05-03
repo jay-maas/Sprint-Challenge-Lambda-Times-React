@@ -5,6 +5,8 @@ import Cards from './Cards';
 
 import { tabData, cardData } from '../../data';
 
+import Carousel from '../Carousel/Carousel';
+
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -36,6 +38,7 @@ export default class Content extends Component {
     return (
       <div className="content-container">
         <Tabs selectedTab={this.state.selected} tabs={this.state.tabs} changeSelected={this.changeSelected} />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );

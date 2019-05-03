@@ -13,6 +13,7 @@ flex-direction: row;
 position: fixed;
 height: 44px;
 background-color: #333;
+z-index: 2;
 `
 
 const TopBarContainer = styled.div`
@@ -80,7 +81,7 @@ font-weight: bold;
   cursor: pointer;
 }
 `
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <TopBarWrapper>
       <TopBarContainer>
@@ -99,7 +100,7 @@ const TopBar = () => {
         </TopBarContainerCenter>
 
         <TopBarContainerRight>
-          <span>LOG IN</span>
+          <span onClick={props.onClick}>LOG IN</span>
         </TopBarContainerRight>
 
       </TopBarContainer>
