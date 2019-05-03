@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Card extends React.Component {
   render() {
@@ -18,5 +19,9 @@ class Card extends React.Component {
 };
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  card: PropTypes.objectOf(
+    PropTypes.string.isRequired)
+}
 
 export default Card;

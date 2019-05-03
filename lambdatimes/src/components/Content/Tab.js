@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
   render() {
@@ -17,7 +18,12 @@ class Tab extends React.Component {
   }
 };
 
+Tab.propTypes = {
 
+}
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired
+}
 
 export default Tab;
