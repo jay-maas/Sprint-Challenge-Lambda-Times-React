@@ -18,7 +18,6 @@ class Card extends React.Component {
   }
 };
 
-// Make sure to include PropTypes.
 Card.propTypes = {
   card: PropTypes.objectOf(
     PropTypes.string.isRequired)
