@@ -1,17 +1,20 @@
 import React from 'react';
 
-const Card = props => {
-  return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
+class Card extends React.Component {
+  render() {
+    const {headline, img, author } = this.props.card
+    return (
+      <div className="card">
+        <div className="headline">{headline}</div>
+        <div className="author">
+          <div className="img-container">
+            <img src={img} />
+          </div>
+          <span>By {author}</span>
         </div>
-        <span>By {/* author goes here */}</span>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 // Make sure to include PropTypes.
